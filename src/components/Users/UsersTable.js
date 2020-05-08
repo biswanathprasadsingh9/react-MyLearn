@@ -28,6 +28,18 @@ export default class UsersTable extends Component {
     render() {
         return (
             <div className="container">
+                <br/>
+                <div className="form-check">
+                    <label className="form-check-label">
+                    <input type="radio" className="form-check-input" name="optradio" />Male Only
+                    </label>
+                </div>
+                <div className="form-check">
+                    <label className="form-check-label">
+                    <input type="radio" className="form-check-input" name="optradio" />FeMale Only
+                    </label>
+                </div>
+                <br/>
                 <table className="table">
                 <thead className="black white-text">
                 <tr>
