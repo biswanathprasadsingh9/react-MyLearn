@@ -57,9 +57,9 @@ import { withRouter } from 'react-router-dom';
 
 
 
-
-
-
+-------Axios GET DATA https://alligator.io/react/axios-react/
+-------https://tighten.co/blog/adding-react-components-to-a-laravel-app/
+-------Laravel API https://www.toptal.com/laravel/restful-laravel-api-tutorial
 
 
 

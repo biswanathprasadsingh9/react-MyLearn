@@ -1,83 +1,20 @@
 import React, { Component } from 'react'
+import ContactForm from '../components/Contact/ContactForm'
 import BreadCrumb from '../components/BreadCrumb'
 
 export default class ContactUs extends Component {
+
     render() {
         return (
             <>
             <BreadCrumb pageName="Contact Us" />
-
                 <div className="container my-5">
-                    {/*Section: Content*/}
                     <section className="contact-section dark-grey-text mb-5">
-                    {/* Form with header */}
                     <div className="card">
-                        {/* Grid row */}
                         <div className="row">
-                        {/* Grid column */}
                         <div className="col-lg-8">
-                            <div className="card-body form">
-                            {/* Header */}
-                            <h3 className="font-weight-bold dark-grey-text mt-4"><i className="fas fa-envelope pr-2 mr-1" />Write to us:</h3>
-                            {/* Grid row */}
-                            <div className="row">
-                                {/* Grid column */}
-                                <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                    <input type="text" id="form-contact-name" className="form-control" />
-                                    <label htmlFor="form-contact-name" className>Your name</label>
-                                </div>
-                                </div>
-                                {/* Grid column */}
-                                {/* Grid column */}
-                                <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                    <input type="text" id="form-contact-email" className="form-control" />
-                                    <label htmlFor="form-contact-email" className>Your email</label>
-                                </div>
-                                </div>
-                                {/* Grid column */}
-                            </div>
-                            {/* Grid row */}
-                            {/* Grid row */}
-                            <div className="row">
-                                {/* Grid column */}
-                                <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                    <input type="text" id="form-contact-phone" className="form-control" />
-                                    <label htmlFor="form-contact-phone" className>Your phone</label>
-                                </div>
-                                </div>
-                                {/* Grid column */}
-                                {/* Grid column */}
-                                <div className="col-md-6">
-                                <div className="md-form mb-0">
-                                    <input type="text" id="form-contact-company" className="form-control" />
-                                    <label htmlFor="form-contact-company" className>Your company</label>
-                                </div>
-                                </div>
-                                {/* Grid column */}
-                            </div>
-                            {/* Grid row */}
-                            {/* Grid row */}
-                            <div className="row">
-                                {/* Grid column */}
-                                <div className="col-md-12">
-                                <div className="md-form mb-0">
-                                    <textarea id="form-contact-message" className="form-control md-textarea" rows={9} defaultValue={""} />
-                                    <label htmlFor="form-contact-message">Your message</label>
-                                    <a className="btn-floating btn-lg blue">Contact Now
-                                    <i className="far fa-paper-plane" />
-                                    </a>
-                                </div>
-                                </div>
-                                {/* Grid column */}
-                            </div>
-                            {/* Grid row */}
-                            </div>
+                            <ContactForm />
                         </div>
-                        {/* Grid column */}
-                        {/* Grid column */}
                         <div className="col-lg-4">
                             <div className="card-body contact text-center h-100 white-text">
                             <h3 className="font-weight-bold my-4 pb-2">Contact information</h3>
@@ -119,6 +56,7 @@ export default class ContactUs extends Component {
                     {/* Form with header */}
                     </section>
                     {/*Section: Content*/}
+                    <h2 id="thankYouBox"></h2>
                 </div>
                 <br/>
                 <br/>

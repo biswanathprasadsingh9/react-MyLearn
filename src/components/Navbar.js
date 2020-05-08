@@ -10,6 +10,8 @@ import Home from '../pages/Home';
 import AboutUs from '../pages/AboutUs';
 import AboutUsDetails from '../pages/AboutUsDetails'
 import ContactUs from '../pages/ContactUs';
+import Users from '../pages/Users';
+
 import MyErrorPage from '../pages/ErrorPage';
 
 export default class Navbar extends Component {
@@ -29,6 +31,9 @@ export default class Navbar extends Component {
                         <li className="nav-item">
                         <NavLink exact  to="/contact" className="nav-link" activeClassName="myactive">Contact</NavLink>
                         </li>
+                        <li className="nav-item">
+                        <NavLink exact  to="/users" className="nav-link" activeClassName="myactive">Users</NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -36,6 +41,8 @@ export default class Navbar extends Component {
             <Route exact path="/about" component={AboutUs} />
             <Route exact path="/about/:id" component={AboutUsDetails} />
             <Route exact path="/contact" component={ContactUs} />
+            <Route exact path="/users" component={Users} />
+
             {/* <Route component={MyErrorPage} /> */}
             {/* <Route path="*">
                 <Error />
