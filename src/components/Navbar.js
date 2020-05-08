@@ -11,6 +11,8 @@ import AboutUs from '../pages/AboutUs';
 import AboutUsDetails from '../pages/AboutUsDetails'
 import ContactUs from '../pages/ContactUs';
 import Users from '../pages/Users';
+import UserDetails from '../pages/UserDetails';
+
 
 import MyErrorPage from '../pages/ErrorPage';
 
@@ -42,6 +44,9 @@ export default class Navbar extends Component {
             <Route exact path="/about/:id" component={AboutUsDetails} />
             <Route exact path="/contact" component={ContactUs} />
             <Route exact path="/users" component={Users} />
+            <Route exact path="/userdetails/:id" component={UserDetails} />
+
+
 
             {/* <Route component={MyErrorPage} /> */}
             {/* <Route path="*">

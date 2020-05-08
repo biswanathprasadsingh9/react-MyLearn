@@ -41,6 +41,7 @@ const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
     </li>
   ))}
 </div>
+
 ------
 {this.state.services.filter(person => person.url == murl).map(filteredPerson => (
           
@@ -54,6 +55,12 @@ const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 import { withRouter } from 'react-router-dom';
 
 <button className="btn btn-sm float-right btn-primary icon-left" onClick={this.props.history.goBack}>Go Back</button>
+
+
+*****GET ID FROM URL******
+<Route path="/users/:id" component={UserPage}/>
+www.yourwebsite.com/users/22 
+this.props.match.params.id
 
 
 

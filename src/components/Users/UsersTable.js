@@ -1,54 +1,25 @@
 import React, { Component } from 'react'
+import { MdSearch } from 'react-icons/md';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link,
+    Redirect,
+    useParams,
+    useRouteMatch
+  } from "react-router-dom";
+
+// import {userdata} from '../../datas/UserTableData'
+import {userdata} from '../../datas/UserTableAll'
+
 
 export default class UsersTable extends Component {
 
     constructor(props){
         super(props)
         this.state = {
-            users: [
-                {
-                    id:1,
-                    name:'Ron',
-                    class: 8,
-                    mark: 200
-                },
-                {
-                    id:2,
-                    name:'Same',
-                    class: 6,
-                    mark: 500
-                },
-                {
-                    id:3,
-                    name:'Jems',
-                    class: 7,
-                    mark: 400
-                },
-                {
-                    id:4,
-                    name:'Mark',
-                    class: 10,
-                    mark: 700
-                },
-                {
-                    id:5,
-                    name:'Rony',
-                    class: 4,
-                    mark: 400
-                },
-                {
-                    id:6,
-                    name:'Soly',
-                    class: 9,
-                    mark: 600
-                },
-                {
-                    id:7,
-                    name:'Robin',
-                    class: 3,
-                    mark: 200
-                },
-            ]
+            users: userdata
         };
     }
 
@@ -60,19 +31,27 @@ export default class UsersTable extends Component {
                 <table className="table">
                 <thead className="black white-text">
                 <tr>
-                    <th scope="col">ID</th>
+                    <th scope="col">Image</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Class</th>
-                    <th scope="col">Mark</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Phone</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Country</th>
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
                 {this.state.users.map((users) => (
-                    <tr key={users.id}>
-                        <th scope="row">{users.id}</th>
-                        <td>{users.name}</td>
-                        <td>{users.class}</td>
-                        <td>{users.mark}</td>
+                    <tr key={users.login.uuid}>
+                        <th><img src={users.picture.thumbnail} alt=""/></th>
+                        <th>{users.name.first} {users.name.last}</th>
+                        <th>{users.gender}</th>
+                        <td>{users.email}</td>
+                        <td>{users.phone}</td>
+                        <td>{users.location.city}</td>
+                        <td>{users.location.country}</td>
+                        <td><h5><Link to={`userdetails/${users.login.uuid}`}><MdSearch /></Link></h5></td>
                     </tr>
                 ))}
                 </tbody>
