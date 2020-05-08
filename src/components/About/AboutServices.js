@@ -10,32 +10,32 @@ export default class AboutServices extends Component {
         {
           ser: "Web-Development",
           url: "/web-development",
-          det: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed blandit libero volutpat. In metus vulputate eu scelerisque. Pretium aenean pharetra magna ac. At tellus at urna condimentum mattis pellentesque id nibh. Quis eleifend quam adipiscing vitae. Ullamcorper dignissim cras tincidunt lobortis. Tellus in hac habitasse platea."
+          det: "Web design refers to the design of websites that are displayed on the internet..."
         },
         {
           ser: "Web-Design",
           url: "/web-design",
-          det: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed blandit libero volutpat. In metus vulputate eu scelerisque. Pretium aenean pharetra magna ac. At tellus at urna condimentum mattis pellentesque id nibh. Quis eleifend quam adipiscing vitae. Ullamcorper dignissim cras tincidunt lobortis. Tellus in hac habitasse platea."
+          det: "Web development is the work involved in developing a website for the Internet..."
         },
         {
           ser: "SEO",
           url: "/seo",
-          det: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed blandit libero volutpat. In metus vulputate eu scelerisque. Pretium aenean pharetra magna ac. At tellus at urna condimentum mattis pellentesque id nibh. Quis eleifend quam adipiscing vitae. Ullamcorper dignissim cras tincidunt lobortis. Tellus in hac habitasse platea."
+          det: "If you own, manage, monetize, or promote online content via Google Search,..."
         },
         {
           ser: "PPC",
           url: "/ppc",
-          det: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed blandit libero volutpat. In metus vulputate eu scelerisque. Pretium aenean pharetra magna ac. At tellus at urna condimentum mattis pellentesque id nibh. Quis eleifend quam adipiscing vitae. Ullamcorper dignissim cras tincidunt lobortis. Tellus in hac habitasse platea."
+          det: "PPC stands for pay-per-click, a model of internet marketing in which advertisers..."
         },
         {
           ser: "Content Writting",
           url: "/content-writting",
-          det: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed blandit libero volutpat. In metus vulputate eu scelerisque. Pretium aenean pharetra magna ac. At tellus at urna condimentum mattis pellentesque id nibh. Quis eleifend quam adipiscing vitae. Ullamcorper dignissim cras tincidunt lobortis. Tellus in hac habitasse platea."
+          det: "Content writing services (also known as online content writing services and content..."
         },
         {
           ser: "SMO",
           url: "/smo",
-          det: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet mattis vulputate enim nulla aliquet porttitor lacus. Ullamcorper eget nulla facilisi etiam dignissim diam quis enim lobortis. Cras pulvinar mattis nunc sed blandit libero volutpat. In metus vulputate eu scelerisque. Pretium aenean pharetra magna ac. At tellus at urna condimentum mattis pellentesque id nibh. Quis eleifend quam adipiscing vitae. Ullamcorper dignissim cras tincidunt lobortis. Tellus in hac habitasse platea."
+          det: "Social media optimization (SMO) is the use of a number of outlets and communities..."
         },
       ];
 

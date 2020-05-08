@@ -68,7 +68,7 @@ export default class AboutUsDetails extends Component {
         
             <div className="container mt-5">
             <section className="text-justify">
-            <p className="font-weight-bold">{filteredPerson.head}</p>
+            <h2 className="font-weight-bold">{filteredPerson.head}</h2>
             <figure className="figure">
             <img src={filteredPerson.image} className="figure-img img-fluid z-depth-1" alt="..." />
             </figure>
