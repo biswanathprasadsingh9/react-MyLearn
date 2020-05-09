@@ -14,7 +14,6 @@ export default class PeopleTable extends Component {
             people:[]
         }
     }
-
     //GET ALL PEOPLE DATA
     componentDidMount(){
         axios.get(`https://www.learningall.me/api/people`)
