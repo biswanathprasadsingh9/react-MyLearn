@@ -12,6 +12,10 @@ import AboutUsDetails from '../pages/AboutUsDetails'
 import ContactUs from '../pages/ContactUs';
 import Users from '../pages/Users';
 import UserDetails from '../pages/UserDetails';
+import People from '../pages/People';
+import PeopleCreate from '../pages/PeopleCreate'
+
+
 
 
 import MyErrorPage from '../pages/ErrorPage';
@@ -36,6 +40,9 @@ export default class Navbar extends Component {
                         <li className="nav-item">
                         <NavLink exact  to="/users" className="nav-link" activeClassName="myactive">Users</NavLink>
                         </li>
+                        <li className="nav-item">
+                        <NavLink exact  to="/people" className="nav-link" activeClassName="myactive">People</NavLink>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -45,6 +52,10 @@ export default class Navbar extends Component {
             <Route exact path="/contact" component={ContactUs} />
             <Route exact path="/users" component={Users} />
             <Route exact path="/userdetails/:id" component={UserDetails} />
+
+            <Route exact path="/people" component={People} />
+            <Route exact path="/people/create" component={PeopleCreate} />
+
 
 
 
