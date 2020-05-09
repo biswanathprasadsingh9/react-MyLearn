@@ -14,6 +14,8 @@ import Users from '../pages/Users';
 import UserDetails from '../pages/UserDetails';
 import People from '../pages/People';
 import PeopleCreate from '../pages/PeopleCreate'
+import PeopleEdit from '../pages/PeopleEdit'
+
 
 
 
@@ -55,6 +57,7 @@ export default class Navbar extends Component {
 
             <Route exact path="/people" component={People} />
             <Route exact path="/people/create" component={PeopleCreate} />
+            <Route exact path="/people/edit/:id" component={PeopleEdit} />
 
 
 
