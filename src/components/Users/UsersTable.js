@@ -10,6 +10,8 @@ import {
     useRouteMatch
   } from "react-router-dom";
 
+import axios from 'axios';
+
 // import {userdata} from '../../datas/UserTableData'
 import {userdata} from '../../datas/UserTableAll'
 
@@ -22,47 +24,29 @@ export default class UsersTable extends Component {
             usersMainData: userdata,
             users: userdata,
             country: '',
+            persons:[]
         };
     }
 
 
     
+    // componentDidMount() {
+    //     axios.get(`https://jsonplaceholder.typicode.com/users`)
+    //       .then(res => {
+    //         const persons = res.data;
+    //         this.setState({ persons });
+    //       })
+    //   }
 
-    // handleClick = (e) => {
-    //     e.preventDefault()
+      componentDidMount() {
+        axios.get(`https://www.learningall.me/api/people`)
+          .then(res => {
+            const persons = res.data;
+            this.setState({ persons });
+          })
+      }
+      
 
-    //     let name = event.target.value;
-    //     document.getElementById('usernameshow').innerHTML=name;
-
-
-    //     console.log(userdata)
-    // }
-
-    // handleClick=(event)=>{
-    //     let name = event.target.value;
-    //     document.getElementById('usernameshow').innerHTML=name;
-
-    //     console.log(name)
-
-    //     // const usersOnline = this.state.users.filter(user => user.name.first !== name);
-    //     // const usersOnline = this.state.users.filter(item => item.gender !== name);
-
-    //     const usersOnline = this.state.users.filter(item => item.name.first  !== name);
-
-
-
-    //     console.log(usersOnline)
-
-
-    //     let a = ["foo","fool","cool","god"];
-    //     let term = 'od';
-    //     let b = a.filter(item => item.toLowerCase().indexOf(term) > -1);
-    //     console.log(b)
-
-    //     // this.setState({
-    //     //     users:usersOnline
-    //     // })
-    // }
 
 
     handleName=(event)=> {
@@ -157,6 +141,13 @@ export default class UsersTable extends Component {
                 </tr>
                 </thead>
                 <tbody>
+
+                <ul>
+        { this.state.persons.map(person => <li>{person.name}</li>)}
+      </ul> 
+
+
+
                 {this.state.users.map((users) => (
                     <tr key={users.login.uuid}>
                         <th><img src={users.picture.thumbnail} alt=""/></th>

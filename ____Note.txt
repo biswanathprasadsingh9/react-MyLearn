@@ -87,7 +87,7 @@ www.yourwebsite.com/users/22
 this.props.match.params.id
 
 
-
+-------How to use LaravelApi https://www.toptal.com/laravel/restful-laravel-api-tutorial
 -------Axios GET DATA https://alligator.io/react/axios-react/
 -------https://tighten.co/blog/adding-react-components-to-a-laravel-app/
 -------Laravel API https://www.toptal.com/laravel/restful-laravel-api-tutorial
