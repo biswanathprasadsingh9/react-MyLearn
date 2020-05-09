@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import axios from 'axios'
-import { BsEyeFill } from "react-icons/bs";
+import { MdVisibility } from "react-icons/md";
+import { MdBuild } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export default class PeopleTable extends Component {
 
@@ -51,7 +54,7 @@ export default class PeopleTable extends Component {
                         <td>{data.phone}</td>
                         <td>{data.gender}</td>
                         <td>{data.age}</td>
-                        <td><h6><BsEyeFill /></h6></td>
+                        <td><h6><Link to={`people/details/${data.id}`} ><MdVisibility /></Link>   <Link to={`people/edit/${data.id}`}><MdBuild /></Link>   <Link><MdDelete /></Link> </h6></td>
                     </tr>
                     ))}
                 </tbody>

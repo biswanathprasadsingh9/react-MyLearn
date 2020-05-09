@@ -98,7 +98,7 @@ this.props.match.params.id
 ------POST DATA LARAVEL AXIOUS https://www.itsolutionstuff.com/post/laravel-react-js-axios-post-request-example-tutorialexample.html
 ------POST FROM DATA USING AXIOUShttps://stackoverflow.com/questions/47630163/axios-post-request-to-send-form-data
 
-
+------Sweetalert2 React https://www.c-sharpcorner.com/article/integration-of-sweetalert2-in-react/
 
 
 …or create a new repository on the command line

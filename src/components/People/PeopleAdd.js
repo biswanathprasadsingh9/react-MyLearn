@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import Swal from "sweetalert2";
+import { Redirect } from 'react-router-dom'
 
 export default class PeopleAdd extends Component {
 
@@ -42,16 +44,28 @@ export default class PeopleAdd extends Component {
         })
         .then(function (response) {
             console.log(response.data);
-            this.setState({
-                showmessage: 'Success',
-            })
+            console.log('Success');
+            Swal.fire({  
+                title: 'Success',  
+                type: 'success',  
+                text: 'Your work has been saved.', 
+                confirmButtonText: "OK"
+                }).then(function() {
+                    // this.history.push('/people');
+                    alert('hi')
+                    return <Redirect to='/people' />
+                }); 
+
+            
+
+                
         })
         .catch(function (error) {
             console.log(error);
         });
         
         this.setState({
-            name:'ss',
+            name:'',
             email:'',
             country:'',
             city:'',
@@ -59,10 +73,9 @@ export default class PeopleAdd extends Component {
             gender:'',
             age:'',
         })
-
     }
 
-
+    
     render() {
         return (
             <section>
