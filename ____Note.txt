@@ -51,10 +51,34 @@ const names = ['James', 'John', 'Paul', 'Ringo', 'George'];
 
 
 
+
+
+
 ******GO Back Button******
 import { withRouter } from 'react-router-dom';
 
 <button className="btn btn-sm float-right btn-primary icon-left" onClick={this.props.history.goBack}>Go Back</button>
+
+
+
+
+
+
+*****Run Function with value****
+handleClick=(event)=>{
+            let name = event.target.value;
+        document.getElementById('usernameshow').innerHTML=name;
+      }
+
+<input type="text" className="form-control" id="username" placeholder="Search By Name" onChange={(e)=>this.handleClick(e)}/>
+
+
+
+
+
+******Use if else condition in const******
+const users = cname == '' ?  this.state.usersMainData.filter(item=> item.nat) :  this.state.usersMainData.filter(item=> item.nat == cname);
+
 
 
 *****GET ID FROM URL******
@@ -67,6 +91,8 @@ this.props.match.params.id
 -------Axios GET DATA https://alligator.io/react/axios-react/
 -------https://tighten.co/blog/adding-react-components-to-a-laravel-app/
 -------Laravel API https://www.toptal.com/laravel/restful-laravel-api-tutorial
+-------W3school JS Array https://www.w3schools.com/jsref/jsref_find.asp
+-------React Multiple filter Example http://embed.plnkr.co/MoYiAc/
 
 
 

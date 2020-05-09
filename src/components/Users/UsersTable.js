@@ -19,28 +19,131 @@ export default class UsersTable extends Component {
     constructor(props){
         super(props)
         this.state = {
-            users: userdata
+            usersMainData: userdata,
+            users: userdata,
+            country: '',
         };
     }
 
 
+    
 
-    render() {
+    // handleClick = (e) => {
+    //     e.preventDefault()
+
+    //     let name = event.target.value;
+    //     document.getElementById('usernameshow').innerHTML=name;
+
+
+    //     console.log(userdata)
+    // }
+
+    // handleClick=(event)=>{
+    //     let name = event.target.value;
+    //     document.getElementById('usernameshow').innerHTML=name;
+
+    //     console.log(name)
+
+    //     // const usersOnline = this.state.users.filter(user => user.name.first !== name);
+    //     // const usersOnline = this.state.users.filter(item => item.gender !== name);
+
+    //     const usersOnline = this.state.users.filter(item => item.name.first  !== name);
+
+
+
+    //     console.log(usersOnline)
+
+
+    //     let a = ["foo","fool","cool","god"];
+    //     let term = 'od';
+    //     let b = a.filter(item => item.toLowerCase().indexOf(term) > -1);
+    //     console.log(b)
+
+    //     // this.setState({
+    //     //     users:usersOnline
+    //     // })
+    // }
+
+
+    handleName=(event)=> {
+
+        let name= event.target.value;
+
+        let a = this.state.usersMainData;
+        let term = name;
+        let b = a.filter(item => item.name.first.toLowerCase().indexOf(term) > -1);
+        this.setState({
+            users: b
+        })
+
+        document.getElementById('usernameshow').innerHTML=name;
+    }
+
+
+    handleCountry=(event)=> {
+
+        let cname= event.target.value;
+    
+        const users = cname == '' ?  this.state.usersMainData.filter(item=> item.nat) :  this.state.usersMainData.filter(item=> item.nat == cname);
+
+        this.setState({
+            users: users
+        })
+
+        document.getElementById('usernameshow').innerHTML=cname;
+
+    }
+
+    handleGender=(event)=> {
+        let gender= event.target.value;
+
+        let users = gender == '' ? this.state.usersMainData.filter(item=> item.gender) : this.state.usersMainData.filter(item=> item.gender == gender) ;
+
+        this.setState({
+            users: users
+        })
+        document.getElementById('usernameshow').innerHTML=gender;
+    }
+
+
+    render() {        
         return (
             <div className="container">
                 <br/>
-                <div className="form-check">
-                    <label className="form-check-label">
-                    <input type="radio" className="form-check-input" name="optradio" />Male Only
-                    </label>
-                </div>
-                <div className="form-check">
-                    <label className="form-check-label">
-                    <input type="radio" className="form-check-input" name="optradio" />FeMale Only
-                    </label>
+                <div className="row">
+                    <div className="col-md-4">
+                        <div className="form-group">
+                            <input type="text" className="form-control" id="username" placeholder="Search By Name" onChange={(e)=>this.handleName(e)}/>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div class="form-group">
+                        <select class="form-control" id="country" onChange={(e)=>this.handleCountry(e)}>
+                            <option value="">All Country</option>
+                            <option value="US">United States</option>
+                            <option value="DK">Denmark</option>
+                            <option value="FR">France</option>
+                            <option value="GB">United Kingdom</option>
+
+                        </select>
+                        </div>
+                    </div>
+                    <div className="col-md-4">
+                        <div class="form-group">
+                        <select class="form-control" id="gender" onChange={(e)=>this.handleGender(e)}>
+                            <option value="">All Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+
+                        </select>
+                        </div>
+                    </div>
+                    <div className="col-md-12">
+                        <h2>Showing results: <span id="usernameshow"></span></h2>
+                    </div>
                 </div>
                 <br/>
-                <table className="table">
+                <table className="table mt-5">
                 <thead className="black white-text">
                 <tr>
                     <th scope="col">Image</th>
@@ -67,6 +170,22 @@ export default class UsersTable extends Component {
                     </tr>
                 ))}
                 </tbody>
+                {/* <tbody>
+                {this.state.users.filter(   
+                    person => person.nat === this.state.country
+                    ).map((users) => (
+                    <tr key={users.login.uuid}>
+                        <th><img src={users.picture.thumbnail} alt=""/></th>
+                        <th>{users.name.first} {users.name.last}</th>
+                        <th>{users.gender}</th>
+                        <td>{users.email}</td>
+                        <td>{users.phone}</td>
+                        <td>{users.location.city}</td>
+                        <td>{users.location.country}</td>
+                        <td><h5><Link to={`userdetails/${users.login.uuid}`}><MdSearch /></Link></h5></td>
+                    </tr>
+                ))}
+                </tbody> */}
             </table>
             </div> 
         )
