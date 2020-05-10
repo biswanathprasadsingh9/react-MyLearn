@@ -53,7 +53,10 @@ export default class PeopleTable extends Component {
                         <td>{data.phone}</td>
                         <td>{data.gender}</td>
                         <td>{data.age}</td>
-                        <td><h6><Link to={`people/details/${data.id}`} ><MdVisibility /></Link>   <Link to={`people/edit/${data.id}`}><MdBuild /></Link>   <Link><MdDelete /></Link> </h6></td>
+                        <td><h6><Link to={`people/details/${data.id}`} ><MdVisibility /></Link> 
+                        &nbsp;  
+                        <Link to={`people/edit/${data.id}`}><MdBuild /></Link>   
+                        </h6></td>
                     </tr>
                     ))}
                 </tbody>

@@ -81,6 +81,14 @@ const users = cname == '' ?  this.state.usersMainData.filter(item=> item.nat) : 
 
 
 
+
+
+*******Redirect Page
+this.props.history.push(`/customers/${customer.id}`, null);
+
+
+
+
 *****GET ID FROM URL******
 <Route path="/users/:id" component={UserPage}/>
 www.yourwebsite.com/users/22 
@@ -99,6 +107,41 @@ this.props.match.params.id
 ------POST FROM DATA USING AXIOUShttps://stackoverflow.com/questions/47630163/axios-post-request-to-send-form-data
 
 ------
+
+
+
+
+
+///////////////////////////AXIOUS USAGE//////////////////////////
+handleSubmit(event) {
+        event.preventDefault();
+        const products = {
+            id: this.state.id,
+            name: this.state.name,
+            email: this.state.email,
+            country: this.state.country,
+            city: this.state.city,
+            phone: this.state.phone,
+            gender: this.state.gender,
+            age: this.state.age,
+        }
+        let uri = 'https://www.learningall.me/api/people/'+this.state.id;
+        axios.patch(uri, products).then((response) => {
+              this.props.history.push('/people');
+        });
+      }
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+
+
+
+
 
 
 …or create a new repository on the command line

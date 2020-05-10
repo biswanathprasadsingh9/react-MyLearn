@@ -55,10 +55,7 @@ export default class PeopleAdd extends Component {
                     alert('hi')
                     return <Redirect to='/people' />
                 }); 
-
-            
-
-                
+    
         })
         .catch(function (error) {
             console.log(error);
